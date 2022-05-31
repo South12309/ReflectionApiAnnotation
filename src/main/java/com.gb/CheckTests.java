@@ -1,6 +1,5 @@
 package com.gb;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -46,7 +45,9 @@ public class CheckTests {
 
 
             }
+
             methodsList.sort((method1, method2) -> method1.getAnnotation(Test.class).number() - method2.getAnnotation(Test.class).number());
+
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
